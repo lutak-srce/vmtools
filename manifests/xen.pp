@@ -1,11 +1,13 @@
-# Class: vmtools::xen
 #
-# Installs the Xen Tools for XenServer from
-# Srce Intern repo
+# = Class: vmtools::xen
+#
+# Installs the Xen Tools for XenServer
+#
+# Please add relevant packages to your in-house yum repos.
+#
 class vmtools::xen {
   case $::osfamily {
     /(RedHat|redhat)/: {
-      include ::yum::repo::srce::intern
       package { [ 'xe-guest-utilities', 'xe-guest-utilities-xenstore' ]: ensure => present, }
     }
     /(Debian|debian|Ubuntu|ubuntu)/: {
