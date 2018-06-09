@@ -4,6 +4,7 @@
 class vmtools {
   case $::virtual {
     default:    {}
+    'ovirt':    { include ::vmtools::ovirt }
     /^xen*/:    { include ::vmtools::xen }
     /^vmware$/: { 
                   class{'admintools::make': } ->
