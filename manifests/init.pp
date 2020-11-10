@@ -15,5 +15,7 @@ class vmtools {
 
       class{ 'openvmtools':
         require => Exec['vmware-uninstall-tools'],
+      }
+    }
   }
 }
