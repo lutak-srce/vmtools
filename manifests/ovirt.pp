@@ -10,9 +10,9 @@ class vmtools::ovirt {
       package { 'ovirt-guest-agent-common': }
 
       service { 'ovirt-guest-agent':
-        ensure  => running,
-	enable  => true,
-	require => Package['ovirt-guest-agent-common'],
+        ensure => running,
+        enable => true,
+        equire => Package['ovirt-guest-agent-common'],
       }
 
     }
