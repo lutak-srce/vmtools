@@ -11,8 +11,8 @@ class vmtools::xen {
       package { [ 'xe-guest-utilities', 'xe-guest-utilities-xenstore' ]: ensure => present, }
     }
     /(Debian|debian|Ubuntu|ubuntu)/: {
-      include ::aptrepo::debian
-      include ::aptrepo::srce
+      include aptrepo::debian
+      include aptrepo::srce
       package { [ 'xe-guest-utilities' ]: ensure => present, }
     }
     default: {

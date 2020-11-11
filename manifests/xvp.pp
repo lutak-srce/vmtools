@@ -5,6 +5,6 @@ class vmtools::xvp (
   $package_ensure = 'present',
 ){
   package { 'xvp' :
-    ensure   => $package_ensure,
+    ensure => $package_ensure,
   }
 }
